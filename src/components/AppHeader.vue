@@ -6,9 +6,9 @@
   <v-app-bar flat>
     <!--
     Conteneur de la barre d'application
-      * class="d-flex align-start align-center" aligne les éléments de manière flexible, alignés en haut et centrés verticalement
+      * class="d-flex align-center" aligne les éléments verticalement au centre
     -->
-    <v-container class="d-flex align-start align-center">
+    <v-container class="d-flex align-center">
       <!--
       Logo de l'application cliquable
         * class="mr-4 pa-0 cursor-pointer" ajoute une marge à droite, retire le padding, et change le curseur pour indiquer la cliquabilité

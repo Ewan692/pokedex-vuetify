@@ -31,7 +31,7 @@
     -->
     <v-footer>
       <div class="px-4 text-center w-100">
-        2024 - Pokédex
+        2025 - Pokédex
       </div>
     </v-footer>
   </v-app>
