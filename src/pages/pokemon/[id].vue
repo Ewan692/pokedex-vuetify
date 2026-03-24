@@ -13,9 +13,17 @@
       Retour
     </v-btn>
 
-    <!-- Message si le Pokémon n'est pas trouvé -->
+    <!-- Skeleton pendant le chargement -->
+    <v-skeleton-loader
+      v-if="pokemonStore.isLoading"
+      type="card, article"
+      max-width="800"
+      class="mx-auto"
+    />
+
+    <!-- Message si le Pokémon n'est pas trouvé (après chargement) -->
     <v-alert
-      v-if="!pokemon"
+      v-else-if="!pokemon"
       type="error"
       variant="tonal"
     >
@@ -27,7 +35,7 @@
       * v-if="pokemon" vérifie que le Pokémon existe avant de l'afficher
     -->
     <v-card
-      v-if="pokemon"
+      v-else-if="pokemon"
       max-width="800"
       class="mx-auto"
     >

@@ -59,7 +59,7 @@
       <v-card>
         <v-card-title>Carte de Kanto</v-card-title>
         <v-img
-          src="/images/pokemon-map.png"
+          :src="getImageUrl('pokemon-map.png')"
           alt="Carte de la région de Kanto"
         />
         <v-card-actions>
@@ -78,6 +78,8 @@
 </template>
 
 <script setup>
+import { getImageUrl } from '@/utils/imageUrl'
+
 /**
  * État local pour contrôler l'affichage du dialogue de la carte
  * ref() est auto-importé grâce à unplugin-auto-import
