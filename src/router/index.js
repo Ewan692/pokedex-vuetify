@@ -1,20 +1,17 @@
 /**
- * router/index.ts
+ * Configuration du routeur
  *
- * Automatic routes for `./src/pages/*.vue`
+ * Routes automatiques depuis `./src/pages/*.vue`
  */
-
-// Composables
 import { createRouter, createWebHistory } from 'vue-router/auto'
-import { setupLayouts } from 'virtual:generated-layouts'
 import { routes } from 'vue-router/auto-routes'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
-  routes: setupLayouts(routes),
+  routes,
 })
 
-// Workaround for https://github.com/vitejs/vite/issues/11804
+// Workaround pour https://github.com/vitejs/vite/issues/11804
 router.onError((err, to) => {
   if (err?.message?.includes?.('Failed to fetch dynamically imported module')) {
     if (!localStorage.getItem('vuetify:dynamic-reload')) {
